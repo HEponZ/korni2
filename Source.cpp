@@ -1,7 +1,5 @@
 #include "Quadr_equation.h"
-#include "Lin_equation.h"/*
-#include "Quadr_equation.cpp"
-#include "Lin_equation.cpp"*/
+#include "Lin_equation.h"
 
 int main()
 {
