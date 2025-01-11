@@ -1,5 +1,5 @@
 #include "Quadr_equation.h"
-#include "Lin_equation.h"
+#include "Lin_equation.h" 
 
 int main()
 {
@@ -9,8 +9,8 @@ int main()
 
 	try
 	{
-		cout << "Корень 1: " << equation1.roots_equation()[0] << "\nКорень 2: " << equation1.roots_equation()[1] << "\n";
-		cout << "Корень: " << equation2.roots_equation()[0] << "\n";
+		cout << "Корень 1: " << equation1.roots_equation().first << "\nКорень 2: " << equation1.roots_equation().second << "\n";
+		cout << "Корень: " << equation2.roots_equation().first << "\n";
 	}
 	catch (const logic_error& exc)
 	{

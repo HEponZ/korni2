@@ -3,11 +3,8 @@
 
 class Lin_equation : protected Base
 {
-private:
-	double a;
-	double b;
 public:
-	Lin_equation(double a_S, double b_S) : a{ a_S }, b{ b_S } {};
+	Lin_equation(double a_S, double b_S) noexcept : Base(a_S, b_S) {};
 
-	vector<double> roots_equation();
+	pair<double, double> roots_equation() override;
 };

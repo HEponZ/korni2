@@ -1,14 +1,15 @@
 #pragma once
 #include "Base.h"
 
-class Quadr_equation : protected Base
+class Quadr_equation : public Base
 {
 private:
-	double a;
-	double b;
 	double c;
 public:
-	Quadr_equation(double a_S, double b_S, double c_S) : a{ a_S }, b{ b_S }, c{ c_S } {}
+	Quadr_equation(double a_S, double b_S, double c_S) noexcept : Base(a_S, b_S), c{ c_S } {}
 
-	vector<double> roots_equation();
+	double get_c()const noexcept { return c; }
+	void set_c(double c_S) noexcept { c = c_S; }
+
+	pair<double, double> roots_equation() override;
 };
