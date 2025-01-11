@@ -6,10 +6,12 @@ pair<double, double> Lin_equation::roots_equation()
 	{
 		if (b == 0)
 		{
+			//Если а и б равны нулю, значит корень любое число
 			return { 0,0 };
 		}
 		else
 		{
+			//Если а равно 0, значит корней нет
 			throw logic_error("Нет корней\n");
 		}
 	}

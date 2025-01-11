@@ -6,10 +6,13 @@ class Quadr_equation : public Base
 private:
 	double c;
 public:
+	Quadr_equation() = default;
+	//Конструктор с параметрами для инициализации уравнения при создании
 	Quadr_equation(double a_S, double b_S, double c_S) noexcept : Base(a_S, b_S), c{ c_S } {}
 
 	double get_c()const noexcept { return c; }
 	void set_c(double c_S) noexcept { c = c_S; }
 
+	//Переопределенный метод для подсчитывания корней
 	pair<double, double> roots_equation() override;
 };
